@@ -1,0 +1,65 @@
+.cat-image {
+    height: 200px;
+    width: 250px;
+}
+
+.cat-image:hover {
+    background: #8dceff;
+    box-shadow: 0 5px 0 rgb(140, 205, 255);
+}
+
+.full-info-switch {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.cat-name {
+    text-indent: 5px;
+}
+.card {
+    float: left;
+    border: 0.5px solid grey;
+    margin: 30px 6px 6px 6px;
+    
+}
+
+.card:hover {
+    box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.short-info > ul > li:hover {
+    font-size: 103%;
+}
+
+.name-link
+{
+    text-decoration: none;
+    color: #1b1a1a;
+}
+
+.full-info-switch:checked ~ .card  {
+    float: none;
+    width: 500px;
+    transform: translate(100%, 0);
+}
+
+.full-info-switch:checked ~ .card > .cat-image {
+    height: 400px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;  
+}
+
+.full-info-switch:not(:checked) ~ .card > .full-info {
+    display: none;
+}
+
+.full-info-switch:checked ~ .card > .full-info {
+    display: block;
+}
+
+.full-info-switch:checked ~ .card > .short-info {
+    display: none;
+}
